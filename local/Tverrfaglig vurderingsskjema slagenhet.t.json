@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "96cfd855ef621d15928901457a519076",
+      "MD5-CAM-1.0.1" : "966bbcde1649914986b814ef0110ca92",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -709,7 +709,7 @@
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "local_terms_7",
                         "code" : "1",
-                        "value" : "MÅ-kriteriene er ikke oppfylt."
+                        "value" : "Må-kriteriene er ikke oppfylt."
                       }, {
                         "terminologyId" : "local_terms_7",
                         "code" : "2",
