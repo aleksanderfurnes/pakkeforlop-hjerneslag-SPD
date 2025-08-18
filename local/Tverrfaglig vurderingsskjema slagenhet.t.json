@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "26a3dbadc72000885cdbbc15b23ab698",
+      "MD5-CAM-1.0.1" : "75b8660d94fb3c4c3bfbca253afba2a6",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -648,6 +648,112 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "1",
+                        "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "2",
+                        "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "3",
+                        "value" : "Kognitivt nivå som sikrer en viss innlæringsevne"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "4",
+                        "value" : "Motivasjon for trening til stede eller kan bygges opp"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.3",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms_2"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms_2" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "1",
+                        "value" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "2",
+                        "value" : "Tidligere funksjonsnivå tilsvarende mRS 0–2 Ingen uttalt komorbiditet som hindrer rehabilitering"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "3",
+                        "value" : "Tåler moderat intensitet/mengde av trening"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "4",
+                        "value" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "5",
+                        "value" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "6",
+                        "value" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -895,110 +1001,24 @@
               "nodeId" : "at0002.4",
               "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "1",
-                        "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "2",
-                        "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "3",
-                        "value" : "Kognitivt nivå som sikrer en viss innlæringsevne"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "4",
-                        "value" : "Motivasjon for trening til stede eller kan bygges opp"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0003.3",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms_2"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms_2" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "1",
-                        "value" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "2",
-                        "value" : "Tidligere funksjonsnivå tilsvarende mRS 0–2 Ingen uttalt komorbiditet som hindrer rehabilitering"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "3",
-                        "value" : "Tåler moderat intensitet/mengde av trening"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "4",
-                        "value" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "5",
-                        "value" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "6",
-                        "value" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0003.2",
+              "nodeId" : "at0007.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -1244,9 +1264,15 @@
           "at0002.8" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.8",
-            "text" : "Kommunal rehabilitering",
+            "text" : "Kommunal rehabilitering alternativer",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0007.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007.1",
+            "text" : "Vurderingsdato",
+            "description" : "Datoen denne anbefalingen sist ble oppdatert."
           }
         },
         "sv" : {
