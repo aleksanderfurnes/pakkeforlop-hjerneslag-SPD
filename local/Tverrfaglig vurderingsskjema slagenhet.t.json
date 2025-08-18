@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "966bbcde1649914986b814ef0110ca92",
+      "MD5-CAM-1.0.1" : "26a3dbadc72000885cdbbc15b23ab698",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -1237,7 +1237,7 @@
           "at0002.6" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.6",
-            "text" : "Anbefalt videre forløp. Initial rehabilitering anbefales (2)",
+            "text" : "Anbefalt videre forløp. Initial rehabilitering anbefales",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           },
