@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "93c8802a65b7156033024fdc90aeb19a",
+      "MD5-CAM-1.0.1" : "96cfd855ef621d15928901457a519076",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -671,15 +671,91 @@
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "local_terms_3",
                         "code" : "1",
-                        "value" : "Forventet nytte av rehabilitering fordi må-kriteriene er oppfylt. Initial rehabilitering anbefales"
+                        "value" : "Forventet nytte av rehabilitering fordi må-kriteriene er oppfylt."
                       }, {
                         "terminologyId" : "local_terms_3",
                         "code" : "2",
-                        "value" : "Ingen forventet nytte av rehabilitering fordi MÅ-kriteriene ikke er oppfylt. Initial rehabilitering anbefales ikke"
+                        "value" : "Ingen forventet nytte av rehabilitering fordi:"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.5",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms_7"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms_7" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms_7",
+                        "code" : "1",
+                        "value" : "MÅ-kriteriene er ikke oppfylt."
                       }, {
-                        "terminologyId" : "local_terms_3",
+                        "terminologyId" : "local_terms_7",
+                        "code" : "2",
+                        "value" : "Andre forhold vektlegges selv om må-kriteriene er oppfylt."
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.6",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms_8"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms_8" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms_8",
+                        "code" : "1",
+                        "value" : "Spesialisert rehabilitering"
+                      }, {
+                        "terminologyId" : "local_terms_8",
+                        "code" : "2",
+                        "value" : "Tidlig støttet utskriving (TSU)"
+                      }, {
+                        "terminologyId" : "local_terms_8",
                         "code" : "3",
-                        "value" : "Ingen forventet nytte av rehabilitering fordi andre forhold vektlegges selv om må-kriteriene er oppfylt. Initial rehabilitering anbefales ikke"
+                        "value" : "Kommunal rehabilitering (flere kryss mulig)"
                       } ]
                     } ]
                   } ],
@@ -713,27 +789,57 @@
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "local_terms_4",
                         "code" : "1",
-                        "value" : "Spesialisert rehabilitering Nivå 1"
+                        "value" : "Nivå 1"
                       }, {
                         "terminologyId" : "local_terms_4",
                         "code" : "2",
-                        "value" : "Spesialisert rehabilitering Nivå 2"
+                        "value" : "Nivå 2"
                       }, {
                         "terminologyId" : "local_terms_4",
                         "code" : "3",
-                        "value" : "Spesialisert rehabilitering ukjent nivå"
+                        "value" : "Ukjent nivå"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.8",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms_10"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms_10" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms_10",
+                        "code" : "1",
+                        "value" : "Dag"
                       }, {
-                        "terminologyId" : "local_terms_4",
-                        "code" : "4",
-                        "value" : "Tidlig støttet utskriving (TSU)"
+                        "terminologyId" : "local_terms_10",
+                        "code" : "2",
+                        "value" : "Hjemme"
                       }, {
-                        "terminologyId" : "local_terms_4",
-                        "code" : "5",
-                        "value" : "Kommunal rehabilitering dag"
-                      }, {
-                        "terminologyId" : "local_terms_4",
-                        "code" : "6",
-                        "value" : "Kommunal rehabilitering hjemme"
+                        "terminologyId" : "local_terms_10",
+                        "code" : "3",
+                        "value" : "Døgn"
                       } ]
                     } ]
                   } ],
@@ -766,15 +872,15 @@
                       "selectedTerminologies" : [ "local_terms_5" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "local_terms_5",
-                        "code" : "8",
+                        "code" : "1",
                         "value" : "Utskrivning direkte hjem"
                       }, {
                         "terminologyId" : "local_terms_5",
-                        "code" : "9",
+                        "code" : "2",
                         "value" : "Utskrivning til heldøgns kommunalt omsorgstilbud"
                       }, {
                         "terminologyId" : "local_terms_5",
-                        "code" : "10",
+                        "code" : "3",
                         "value" : "Overføres annen avdeling for utredning/behandling"
                       } ]
                     } ]
@@ -787,43 +893,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0002.4",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms_6"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms_6" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms_6",
-                        "code" : "8",
-                        "value" : "Utskrivning direkte hjem"
-                      }, {
-                        "terminologyId" : "local_terms_6",
-                        "code" : "9",
-                        "value" : "Utskrivning til heldøgns kommunalt omsorgstilbud"
-                      }, {
-                        "terminologyId" : "local_terms_6",
-                        "code" : "10",
-                        "value" : "Overføres annen avdeling for utredning/behandling"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -975,6 +1045,27 @@
             "text" : "Recommendation (4)",
             "description" : "Narrative description of the recommendation.",
             "comment" : "May be coded, using a terminology, if required."
+          },
+          "at0002.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Recommendation (5)",
+            "description" : "Narrative description of the recommendation.",
+            "comment" : "May be coded, using a terminology, if required."
+          },
+          "at0002.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recommendation (6)",
+            "description" : "Narrative description of the recommendation.",
+            "comment" : "May be coded, using a terminology, if required."
+          },
+          "at0002.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recommendation (8)",
+            "description" : "Narrative description of the recommendation.",
+            "comment" : "May be coded, using a terminology, if required."
           }
         },
         "es-ar" : {
@@ -1008,6 +1099,27 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Recomendación (4)",
+            "description" : "Descripción narrativa de la recomendación",
+            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
+          },
+          "at0002.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Recomendación (5)",
+            "description" : "Descripción narrativa de la recomendación",
+            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
+          },
+          "at0002.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendación (6)",
+            "description" : "Descripción narrativa de la recomendación",
+            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
+          },
+          "at0002.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendación (8)",
             "description" : "Descripción narrativa de la recomendación",
             "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
           }
@@ -1045,20 +1157,41 @@
             "text" : "Recomendação (4)",
             "description" : "Descrição narrativa da recomendação.",
             "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
+          },
+          "at0002.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Recomendação (5)",
+            "description" : "Descrição narrativa da recomendação.",
+            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
+          },
+          "at0002.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendação (6)",
+            "description" : "Descrição narrativa da recomendação.",
+            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
+          },
+          "at0002.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendação (8)",
+            "description" : "Descrição narrativa da recomendação.",
+            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
           }
         },
         "nb" : {
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
-            "text" : "Vurdering forventet nytte",
+            "text" : "Forventet nytte",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           },
           "at0002.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.2",
-            "text" : "Anbefalt videre forløp. Initial rehabilitering anbefales",
+            "text" : "Spesialisert rehabilitering alternativer",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           },
@@ -1091,6 +1224,27 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.4",
             "text" : "Pasienten bør utskrives til",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0002.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.5",
+            "text" : "Må-kriterier vurdering",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0002.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.6",
+            "text" : "Anbefalt videre forløp. Initial rehabilitering anbefales (2)",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0002.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.8",
+            "text" : "Kommunal rehabilitering",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           }
@@ -1128,6 +1282,27 @@
             "text" : "Rekommendation (4)",
             "description" : "Beskrivning av rekommendationen.",
             "comment" : "Kan kodas i en terminologi vid behov."
+          },
+          "at0002.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Rekommendation (5)",
+            "description" : "Beskrivning av rekommendationen.",
+            "comment" : "Kan kodas i en terminologi vid behov."
+          },
+          "at0002.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Rekommendation (6)",
+            "description" : "Beskrivning av rekommendationen.",
+            "comment" : "Kan kodas i en terminologi vid behov."
+          },
+          "at0002.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Rekommendation (8)",
+            "description" : "Beskrivning av rekommendationen.",
+            "comment" : "Kan kodas i en terminologi vid behov."
           }
         },
         "de" : {
@@ -1161,6 +1336,27 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Empfehlung (4)",
+            "description" : "Beschreibung der Empfehlung.",
+            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
+          },
+          "at0002.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Empfehlung (5)",
+            "description" : "Beschreibung der Empfehlung.",
+            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
+          },
+          "at0002.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Empfehlung (6)",
+            "description" : "Beschreibung der Empfehlung.",
+            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
+          },
+          "at0002.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Empfehlung (8)",
             "description" : "Beschreibung der Empfehlung.",
             "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
           }
