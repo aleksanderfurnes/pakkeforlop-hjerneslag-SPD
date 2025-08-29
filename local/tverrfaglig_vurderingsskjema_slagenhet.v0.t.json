@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "1f59956337089d8c98934ad1b136bf2e",
+      "MD5-CAM-1.0.1" : "75cd915c5d5059bf3d6c22b5291224a1",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -1606,20 +1606,20 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "konklusjon"
+                        "value" : "rehab_anbefales"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "konklusjon" ],
+                      "selectedTerminologies" : [ "rehab_anbefales" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "rehab_anbefales",
                         "code" : "1",
                         "value" : "Spesialisert rehabilitering (se hjelpeskjema)"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "rehab_anbefales",
                         "code" : "2",
                         "value" : "Tidlig støttet utskriving (TSU)"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "rehab_anbefales",
                         "code" : "3",
                         "value" : "Kommunal rehabilitering (flere kryss mulig)"
                       } ]
@@ -1649,20 +1649,20 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "konklusjon"
+                        "value" : "spesialisert_rehab_niva"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "konklusjon" ],
+                      "selectedTerminologies" : [ "spesialisert_rehab_niva" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "spesialisert_rehab_niva",
                         "code" : "1",
                         "value" : "Nivå 1"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "spesialisert_rehab_niva",
                         "code" : "2",
                         "value" : "Nivå 2"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "spesialisert_rehab_niva",
                         "code" : "3",
                         "value" : "Ukjent nivå"
                       } ]
@@ -1691,20 +1691,20 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "konklusjon"
+                        "value" : "kommunal_rehab_valg"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "konklusjon" ],
+                      "selectedTerminologies" : [ "kommunal_rehab_valg" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "kommunal_rehab_valg",
                         "code" : "1",
                         "value" : "Dag"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "kommunal_rehab_valg",
                         "code" : "2",
                         "value" : "Hjemme"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "kommunal_rehab_valg",
                         "code" : "3",
                         "value" : "Døgn"
                       } ]
@@ -1734,20 +1734,20 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "konklusjon"
+                        "value" : "rehab_anbefales_ikke"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "konklusjon" ],
+                      "selectedTerminologies" : [ "rehab_anbefales_ikke" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "rehab_anbefales_ikke",
                         "code" : "1",
                         "value" : "Utskrivning direkte hjem"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "rehab_anbefales_ikke",
                         "code" : "2",
                         "value" : "Utskrivning til heldøgns kommunalt omsorgstilbud"
                       }, {
-                        "terminologyId" : "konklusjon",
+                        "terminologyId" : "rehab_anbefales_ikke",
                         "code" : "3",
                         "value" : "Overføres annen avdeling for utredning/behandling"
                       } ]
