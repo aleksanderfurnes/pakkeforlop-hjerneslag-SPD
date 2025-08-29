@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "75b8660d94fb3c4c3bfbca253afba2a6",
+      "MD5-CAM-1.0.1" : "9b284d5cb2bf6699f3aa8a3fb7b171ca",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -152,6 +152,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-001.v2",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.8",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v2",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -319,13 +328,6 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
-                      "nodeId" : "at0030.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0008.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -334,6 +336,13 @@
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0004.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0030.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
@@ -648,112 +657,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0003.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
-                        "code" : "1",
-                        "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "2",
-                        "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "3",
-                        "value" : "Kognitivt nivå som sikrer en viss innlæringsevne"
-                      }, {
-                        "terminologyId" : "local_terms",
-                        "code" : "4",
-                        "value" : "Motivasjon for trening til stede eller kan bygges opp"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0003.3",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "local_terms_2"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms_2" ],
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "1",
-                        "value" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "2",
-                        "value" : "Tidligere funksjonsnivå tilsvarende mRS 0–2 Ingen uttalt komorbiditet som hindrer rehabilitering"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "3",
-                        "value" : "Tåler moderat intensitet/mengde av trening"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "4",
-                        "value" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "5",
-                        "value" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
-                      }, {
-                        "terminologyId" : "local_terms_2",
-                        "code" : "6",
-                        "value" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0003.2",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -999,6 +902,112 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0002.4",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "1",
+                        "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "2",
+                        "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "3",
+                        "value" : "Kognitivt nivå som sikrer en viss innlæringsevne"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "4",
+                        "value" : "Motivasjon for trening til stede eller kan bygges opp"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.3",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms_2"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms_2" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "1",
+                        "value" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "2",
+                        "value" : "Tidligere funksjonsnivå tilsvarende mRS 0–2 Ingen uttalt komorbiditet som hindrer rehabilitering"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "3",
+                        "value" : "Tåler moderat intensitet/mengde av trening"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "4",
+                        "value" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "5",
+                        "value" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
+                      }, {
+                        "terminologyId" : "local_terms_2",
+                        "code" : "6",
+                        "value" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.2",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -1383,6 +1392,768 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
             "text" : "Empfehlung (8)",
+            "description" : "Beschreibung der Empfehlung.",
+            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d31bd093-f325-4f21-a982-8f8520a7baa2",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "rehberg.alina@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult",
+        "organisation" : "Region Östergötland",
+        "email" : "asa.skagerhult@regionostergotland.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
+        "alandmarch@gmail.com" : "alandmarch@gmail.com",
+        "email" : "alandmarch@gmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Bjørn Grøva, John Tore Valand",
+        "organisation" : "Direktoratet for e-helse, Helse Bergen",
+        "email" : "bjorn.grova@ehelse.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Hospital Sirio Libanes, Brazil",
+        "email" : "vladimir.pizzo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "f3090ca1-5d7d-4ad5-b6f4-274a94791db8",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "F3A7D36EBD28087AD91119914C081F32"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v2"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0006.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.3",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "maa_kriterie"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "maa_kriterie" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "1",
+                        "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS > 1"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "2",
+                        "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "3",
+                        "value" : "Kognitivt nivå som sikrer en viss innlæringsevne"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "4",
+                        "value" : "Motivasjon for trening til stede eller kan bygges opp"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.4",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "maa_kriterie"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "maa_kriterie" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "1",
+                        "value" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "2",
+                        "value" : "Tidligere funksjonsnivå tilsvarende mRS 0—2"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "3",
+                        "value" : "Ingen uttalt komorbiditet som hindrer rehabilitering"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "4",
+                        "value" : "Tåler moderat intensitet/mengde av trening"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "5",
+                        "value" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "6",
+                        "value" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "7",
+                        "value" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.5",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "maa_kriterie"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "maa_kriterie" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "1",
+                        "value" : "Forventet nytte av rehabilitering fordi må-kriteriene er oppfylt"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "2",
+                        "value" : "Ingen forventet nytte av rehabilitering fordi:"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.6",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "maa_kriterie"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "maa_kriterie" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "1",
+                        "value" : "Må-kriteriene er ikke oppfylt"
+                      }, {
+                        "terminologyId" : "maa_kriterie",
+                        "code" : "2",
+                        "value" : "Andre forhold vektlegges selv om må-kriteriene er oppfylt"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "konklusjon"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "konklusjon" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "konklusjon",
+                        "code" : "Initial behandling anbefales",
+                        "value" : "Initial behandling anbefales"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "Initial behandling anbefales ikke",
+                        "value" : "Initial behandling anbefales ikke"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.2",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "konklusjon"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "konklusjon" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "konklusjon",
+                        "code" : "1",
+                        "value" : "Spesialisert rehabilitering nivå 1"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "2",
+                        "value" : "Spesialisert rehabilitering nivå 2"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "3",
+                        "value" : "Spesialisert rehabilitering ukjent nivå"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "4",
+                        "value" : "Tidlig støttet utskriving (TSU)"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "5",
+                        "value" : "Kommunal rehabilitering dag"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "6",
+                        "value" : "Kommunal rehabilitering hjemme"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "7",
+                        "value" : "Kommunal rehabilitering døgn"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "8",
+                        "value" : "Utskrivning direkte hjem"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "9",
+                        "value" : "Utskrivning til heldøgns kommunalt omsorgstilbud"
+                      }, {
+                        "terminologyId" : "konklusjon",
+                        "code" : "10",
+                        "value" : "Overføres annen avdeling for utbedring/behandling"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.3",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Recommendation (2)",
+            "description" : "A suggestion, advice or proposal for clinical management."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Rationale (2)",
+            "description" : "Justifications for the recommendation."
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Rationale (3)",
+            "description" : "Justifications for the recommendation."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Rationale (4)",
+            "description" : "Justifications for the recommendation."
+          },
+          "at0003.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Rationale (5)",
+            "description" : "Justifications for the recommendation."
+          },
+          "at0003.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Rationale (6)",
+            "description" : "Justifications for the recommendation."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recommendation (2)",
+            "description" : "Narrative description of the recommendation.",
+            "comment" : "May be coded, using a terminology, if required."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recommendation (3)",
+            "description" : "Narrative description of the recommendation.",
+            "comment" : "May be coded, using a terminology, if required."
+          }
+        },
+        "es-ar" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Recomendación (2)",
+            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (2)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (3)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (4)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (5)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (6)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendación (2)",
+            "description" : "Descripción narrativa de la recomendación",
+            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendación (3)",
+            "description" : "Descripción narrativa de la recomendación",
+            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
+          }
+        },
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Recomendação (2)",
+            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Justificativa (2)",
+            "description" : "Justificativa para a recomendação."
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Justificativa (3)",
+            "description" : "Justificativa para a recomendação."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Justificativa (4)",
+            "description" : "Justificativa para a recomendação."
+          },
+          "at0003.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Justificativa (5)",
+            "description" : "Justificativa para a recomendação."
+          },
+          "at0003.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Justificativa (6)",
+            "description" : "Justificativa para a recomendação."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendação (2)",
+            "description" : "Descrição narrativa da recomendação.",
+            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Recomendação (3)",
+            "description" : "Descrição narrativa da recomendação.",
+            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Anbefaling (2)",
+            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Konklusjon",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.2",
+            "text" : "Andre forhold som bør vektlegges ved anbefaling om rehabilitering og videre forløp:",
+            "description" : "Begrunnelse for anbefalingen."
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.3",
+            "text" : "Må-kriterier",
+            "description" : "Begrunnelse for anbefalingen."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.4",
+            "text" : "Bør-kriterier",
+            "description" : "Begrunnelse for anbefalingen."
+          },
+          "at0003.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.5",
+            "text" : "Forventet nytte",
+            "description" : "Begrunnelse for anbefalingen."
+          },
+          "at0003.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.6",
+            "text" : "Ingen forventet nytte av rehabilitering fordi:",
+            "description" : "Begrunnelse for anbefalingen."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.2",
+            "text" : "Rehabilitering anbefaling",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.3",
+            "text" : "Pasienten bør utskrives til:",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Rekommendation (2)",
+            "description" : "Ett förslag eller råd om behandling."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (2)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (3)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (4)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (5)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0003.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (6)",
+            "description" : "*Justifications for the recommendation.(en)"
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Rekommendation (2)",
+            "description" : "Beskrivning av rekommendationen.",
+            "comment" : "Kan kodas i en terminologi vid behov."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Rekommendation (3)",
+            "description" : "Beskrivning av rekommendationen.",
+            "comment" : "Kan kodas i en terminologi vid behov."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Empfehlung (2)",
+            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Begründung (2)",
+            "description" : "Begründung für die Empfehlung."
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Begründung (3)",
+            "description" : "Begründung für die Empfehlung."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Begründung (4)",
+            "description" : "Begründung für die Empfehlung."
+          },
+          "at0003.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Begründung (5)",
+            "description" : "Begründung für die Empfehlung."
+          },
+          "at0003.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Begründung (6)",
+            "description" : "Begründung für die Empfehlung."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Empfehlung (2)",
+            "description" : "Beschreibung der Empfehlung.",
+            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Empfehlung (3)",
             "description" : "Beschreibung der Empfehlung.",
             "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
           }
