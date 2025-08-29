@@ -19,7 +19,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "07db81728ec0b814bb87e58ee6ba9abf",
+      "MD5-CAM-1.0.1" : "1f59956337089d8c98934ad1b136bf2e",
       "PARENT:MD5-CAM-1.0.1" : "8C341BFFA1E20864451EDDD9770E3D0F"
     },
     "details" : {
@@ -1767,6 +1767,13 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.4",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0003.2",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1874,6 +1881,12 @@
             "text" : "Recommendation (6)",
             "description" : "Narrative description of the recommendation.",
             "comment" : "May be coded, using a terminology, if required."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Rationale (4)",
+            "description" : "Justifications for the recommendation."
           }
         },
         "es-ar" : {
@@ -1929,6 +1942,12 @@
             "text" : "Recomendación (6)",
             "description" : "Descripción narrativa de la recomendación",
             "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (4)",
+            "description" : "*Justifications for the recommendation.(en)"
           }
         },
         "pt-br" : {
@@ -1984,6 +2003,12 @@
             "text" : "Recomendação (6)",
             "description" : "Descrição narrativa da recomendação.",
             "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Justificativa (4)",
+            "description" : "Justificativa para a recomendação."
           }
         },
         "nb" : {
@@ -2052,6 +2077,12 @@
             "text" : "Kommunal rehabilitering valgmuligheter",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.4",
+            "text" : "Andre forhold som bør vektlegges ved anbefaling om rehabilitering og videre forløp:",
+            "description" : "Begrunnelse for anbefalingen."
           }
         },
         "sv" : {
@@ -2107,6 +2138,12 @@
             "text" : "Rekommendation (6)",
             "description" : "Beskrivning av rekommendationen.",
             "comment" : "Kan kodas i en terminologi vid behov."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "*Rationale(en) (4)",
+            "description" : "*Justifications for the recommendation.(en)"
           }
         },
         "de" : {
@@ -2162,6 +2199,12 @@
             "text" : "Empfehlung (6)",
             "description" : "Beschreibung der Empfehlung.",
             "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Begründung (4)",
+            "description" : "Begründung für die Empfehlung."
           }
         }
       },
