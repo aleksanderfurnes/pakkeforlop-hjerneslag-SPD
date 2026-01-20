@@ -25,7 +25,7 @@
       "sem_ver" : "1.0.0",
       "build_uid" : "",
       "MD5-CAM-1.0.1" : "891796cdf06b641438e14d865edef8a1",
-      "PARENT:MD5-CAM-1.0.1" : "6AFDF4A34EB96917079AC64DB5F65463"
+      "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
       "de" : {
@@ -211,7 +211,7 @@
     }
   },
   "parentArchetypeId" : "openEHR-EHR-COMPOSITION.encounter.v1",
-  "differential" : false,
+  "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
     "value" : "openEHR-EHR-COMPOSITION.t_encounter.v1"
@@ -219,99 +219,14 @@
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "COMPOSITION",
-    "occurrences" : "1..1",
     "nodeId" : "at0000.1",
     "attributes" : [ {
       "@type" : "C_ATTRIBUTE",
-      "rmAttributeName" : "category",
-      "existence" : "1..1",
-      "children" : [ {
-        "@type" : "C_COMPLEX_OBJECT",
-        "rmTypeName" : "DV_CODED_TEXT",
-        "occurrences" : "1..1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "defining_code",
-          "existence" : "1..1",
-          "children" : [ {
-            "@type" : "C_TERMINOLOGY_CODE",
-            "rmTypeName" : "CODE_PHRASE",
-            "occurrences" : "1..1",
-            "terminologyId" : {
-              "value" : "openehr"
-            },
-            "constraint" : [ "433" ]
-          } ]
-        } ],
-        "attributeTuples" : [ ]
-      } ]
-    }, {
-      "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "context",
-      "existence" : "0..1",
       "children" : [ {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "EVENT_CONTEXT",
-        "occurrences" : "1..1",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "other_context",
-          "existence" : "0..1",
-          "children" : [ {
-            "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "ITEM_TREE",
-            "occurrences" : "1..1",
-            "nodeId" : "at0001",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "items",
-              "existence" : "0..1",
-              "cardinality" : {
-                "@type" : "CARDINALITY",
-                "interval" : "0..*",
-                "ordered" : false,
-                "unique" : false
-              },
-              "children" : [ {
-                "@type" : "ARCHETYPE_SLOT",
-                "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..*",
-                "nodeId" : "at0002",
-                "includes" : [ {
-                  "@type" : "ASSERTION",
-                  "stringExpression" : "archetype_id/value matches {/.*/}",
-                  "expression" : {
-                    "@type" : "BINARY_OPERATOR",
-                    "type" : "BOOLEAN",
-                    "operator" : "matches",
-                    "leftOperand" : {
-                      "@type" : "MODEL_REFERENCE",
-                      "type" : "STRING",
-                      "precedenceOverriden" : false,
-                      "referenceType" : "Attribute",
-                      "path" : "archetype_id/value"
-                    },
-                    "rightOperand" : {
-                      "@type" : "CONSTRAINT",
-                      "type" : "STRING",
-                      "precedenceOverriden" : false,
-                      "referenceType" : "Constraint",
-                      "item" : {
-                        "@type" : "C_STRING",
-                        "constraint" : [ "/.*/" ]
-                      }
-                    },
-                    "precedenceOverriden" : false
-                  },
-                  "variables" : [ ]
-                } ],
-                "excludes" : [ ],
-                "closed" : false
-              } ]
-            } ],
-            "attributeTuples" : [ ]
-          } ]
-        } ],
+        "attributes" : [ ],
         "attributeTuples" : [ ]
       } ]
     }, {
@@ -366,18 +281,6 @@
           "text" : "skdjfslkjfls",
           "description" : "*Interaction, contact or care event between a subject of care and healthcare provider(s).(en)"
         },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "*Encounter(en)",
-          "description" : "*Interaction, contact or care event between a subject of care and healthcare provider(s).(en)"
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "*Tree(en)",
-          "description" : "*@ internal @(en)"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -392,18 +295,6 @@
           "code" : "at0000.1",
           "text" : "skdjfslkjfls",
           "description" : "Interaction, contact or care event between a subject of care and healthcare provider(s)."
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Encounter",
-          "description" : "Interaction, contact or care event between a subject of care and healthcare provider(s)."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -426,12 +317,6 @@
           "text" : "Encuentro",
           "description" : "Interacción, contacto o evento de cuidados entre un sujeto de cuidados y uno o más proveedores de cuidados de la salud."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "*Tree(en)",
-          "description" : "*@ internal @(en)"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -446,18 +331,6 @@
           "code" : "at0000.1",
           "text" : "skdjfslkjfls",
           "description" : "*Interaction, contact or care event between a subject of care and healthcare provider(s).(en)"
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "*Encounter(en)",
-          "description" : "*Interaction, contact or care event between a subject of care and healthcare provider(s).(en)"
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "*Tree(en)",
-          "description" : "*@ internal @(en)"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -480,12 +353,6 @@
           "text" : "Encontro",
           "description" : "Interação, contato ou cuidado entre o sujeito do cuidado e profissional(is) de saúde."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -506,12 +373,6 @@
           "code" : "at0000",
           "text" : "Encuentro",
           "description" : "Interacción, contacto o evento de cuidado entre un paciente y un proveedor de salud."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -534,12 +395,6 @@
           "text" : "Contact",
           "description" : "Interactie, contact of zorggebeurtenis tussen een onderwerp van zorg en zorgverlener(s)."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -560,12 +415,6 @@
           "code" : "at0000",
           "text" : "Vårdkontakt",
           "description" : "Interaktion eller kontakt mellan patient och vårdgivare eller vårdhändelse inom hälso- och sjukvården."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -588,12 +437,6 @@
           "text" : "Kontakt",
           "description" : "Interaktion, Kontakt oder Versorgungsereignis, zwischen einem Versorgungsempfänger und einem Gesundheitsdienstleister."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -614,12 +457,6 @@
           "code" : "at0000",
           "text" : "Kontakti",
           "description" : "Hoitohenkilön ja terveydenhuollon tarjoajan välinen vuorovaikutus, kontakti- tai hoitotapahtuma."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -642,12 +479,6 @@
           "text" : "Contatto",
           "description" : "Interazione, contatto o evento di cura tra un soggetto di cura e il/i fornitore/i di assistenza sanitaria."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -669,12 +500,6 @@
           "text" : "Rencontre",
           "description" : "Interaction, contact ou événement de soins entre un sujet de soins et un ou des prestataires de soins."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -689,18 +514,6 @@
           "code" : "at0000.1",
           "text" : "skdjfslkjfls",
           "description" : "Interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell."
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Klinisk kontakt",
-          "description" : "Interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -723,12 +536,6 @@
           "text" : "Encontro",
           "description" : "Interação, contato ou evento de cuidados entre um sujeito e um provedor de saúde."
         },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
-        },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0002",
@@ -749,12 +556,6 @@
           "code" : "at0000",
           "text" : "Encontre",
           "description" : "Interacció, contacte o esdeveniment d’atenció entre un pacient i un o més professionals d'atenció sanitària."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Tree",
-          "description" : "@ internal @"
         },
         "at0002" : {
           "@type" : "ARCHETYPE_TERM",
@@ -899,7 +700,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-001.v2"
@@ -907,58 +708,27 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "EVALUATION",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "data",
-        "existence" : "1..1",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
           "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0006",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "1..*",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -975,132 +745,97 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..*",
-              "nodeId" : "at0003",
+              "nodeId" : "at0003.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
+                  "rmTypeName" : "DV_CODED_TEXT",
                   "occurrences" : "1..1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "1",
+                        "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1",
+                        "translations" : {
+                          "en" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
+                        }
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "2",
+                        "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt",
+                        "translations" : {
+                          "en" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
+                        }
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "3",
+                        "value" : "Kognitivt nivå som sikrer en viss innlæringsevne",
+                        "translations" : {
+                          "en" : "Kognitivt nivå som sikrer en viss innlæringsevne"
+                        }
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "4",
+                        "value" : "Motivasjon for trening til stede eller kan bygges opp",
+                        "translations" : {
+                          "en" : "Motivasjon for trening til stede eller kan bygges opp"
+                        }
+                      } ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
             }, {
-              "@type" : "ARCHETYPE_SLOT",
+              "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0008",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "existence" : "0..1",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
-          "nodeId" : "at0004",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
               "occurrences" : "0..1",
-              "nodeId" : "at0007",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
+              "nodeId" : "at0008.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-001.v1",
+              "referenceType" : "archetypeOverlay"
             }, {
-              "@type" : "ARCHETYPE_SLOT",
+              "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0005",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
+              "occurrences" : "0..1",
+              "nodeId" : "at0008.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-002.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0008.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-003.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0008.3",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-004.v1",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -1119,503 +854,19 @@
             "text" : "'Initial screening' Recommendation",
             "description" : "A suggestion, advice or proposal for clinical management."
           },
-          "at0000" : {
+          "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recommendation",
-            "description" : "A suggestion, advice or proposal for clinical management."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recommendation",
-            "description" : "Narrative description of the recommendation.",
-            "comment" : "May be coded, using a terminology, if required."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Rationale",
+            "code" : "at0003.1",
+            "text" : "Must criteria",
             "description" : "Justifications for the recommendation."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extension",
-            "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
-            "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Topic",
-            "description" : "The topic or subject of the recommendation.",
-            "comment" : "Useful if multiple types of recommendations are made at the same time, and within the same data set."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Last updated",
-            "description" : "The date this recommendation was last updated."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "Evidence",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recommendation",
-            "description" : "Narrative description of the recommendation.",
-            "comment" : "May be coded, using a terminology, if required."
           }
         },
-        "es-ar" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendación",
-            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendación",
-            "description" : "Descripción narrativa de la recomendación",
-            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Rationale(en)",
-            "description" : "*Justifications for the recommendation.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extensión",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendación",
-            "description" : "Descripción narrativa de la recomendación",
-            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendación",
-            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          }
-        },
-        "pt-br" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendação",
-            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendação",
-            "description" : "Descrição narrativa da recomendação.",
-            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Justificativa",
-            "description" : "Justificativa para a recomendação."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extensão",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendação",
-            "description" : "Descrição narrativa da recomendação.",
-            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendação",
-            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          }
-        },
-        "nb" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Anbefaling",
-            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling",
-            "description" : "Fritekstbeskrivelse av anbefalingen.",
-            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Begrunnelse",
-            "description" : "Begrunnelse for anbefalingen."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Tema",
-            "description" : "Tema eller emne anbefalingen omhandler.",
-            "comment" : "Dataelementet er hensiktsmessig om man skal registrere flere anbefalinger til samme tema."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Sist oppdatert",
-            "description" : "Datoen denne anbefalingen sist ble oppdatert."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling",
-            "description" : "Fritekstbeskrivelse av anbefalingen.",
-            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Anbefaling",
-            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          }
-        },
-        "sv" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Rekommendation",
-            "description" : "Ett förslag eller råd om behandling."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Rekommendation",
-            "description" : "Beskrivning av rekommendationen.",
-            "comment" : "Kan kodas i en terminologi vid behov."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Rationale(en)",
-            "description" : "*Justifications for the recommendation.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilläggsinformation",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Rekommendation",
-            "description" : "Beskrivning av rekommendationen.",
-            "comment" : "Kan kodas i en terminologi vid behov."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Rekommendation",
-            "description" : "Ett förslag eller råd om behandling."
-          }
-        },
-        "de" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Empfehlung",
-            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Empfehlung",
-            "description" : "Beschreibung der Empfehlung.",
-            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Begründung",
-            "description" : "Begründung für die Empfehlung."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Modelle."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Gegenstand",
-            "description" : "Das Thema oder der Gegenstand der Empfehlung.",
-            "comment" : "Hilfreich, wenn mehrere Arten von Empfehlungen gleichzeitig und innerhalb desselben Datensatzes abgegeben werden."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Zuletzt aktualisiert",
-            "description" : "Das Datum, an dem diese Empfehlung zuletzt aktualisiert wurde."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Empfehlung",
-            "description" : "Beschreibung der Empfehlung.",
-            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Empfehlung",
-            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          }
-        },
-        "nl" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Advies",
-            "description" : "Een suggestie, advies of voorstel voor behandeling."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Advies",
-            "description" : "Verhalende beschrijving van het advies.",
-            "comment" : "Mag gecodeerd worden middels terminologie, indien vereist."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Onderbouwing",
-            "description" : "De onderbouwing voor het advies."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Uitbreiding",
-            "description" : "Additionele informatie benodigd voor het uitbreiden van het model met lokale content of het allignen met andere referentie modellen of formalismen.",
-            "comment" : "Bijvoorbeeld: lokale informatie eisen of metadata om te alignen met FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Onderwerp",
-            "description" : "Het onderwerp waar het advies over gaat.",
-            "comment" : "Bruikbaar als verschillende type adviezen op het zelfde moment gemaakt worden binnen dezelfde dataset."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Laatst geüpdate",
-            "description" : "De datum waarop het advies voor het laatst is geüpdate."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Advies",
-            "description" : "Verhalende beschrijving van het advies.",
-            "comment" : "Mag gecodeerd worden middels terminologie, indien vereist."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Advies",
-            "description" : "Een suggestie, advies of voorstel voor behandeling."
-          }
-        }
+        "es-ar" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "sv" : { },
+        "de" : { },
+        "nl" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -1843,7 +1094,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v2"
@@ -1851,58 +1102,27 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "EVALUATION",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "data",
-        "existence" : "1..1",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
           "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0006",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "1..*",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -1916,135 +1136,6 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..*",
-              "nodeId" : "at0003",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0008",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "existence" : "0..1",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
-          "nodeId" : "at0004",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0007",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0005",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -2062,70 +1153,6 @@
             "code" : "at0000.1",
             "text" : "If Rehab is recommended",
             "description" : "A suggestion, advice or proposal for clinical management."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recommendation",
-            "description" : "A suggestion, advice or proposal for clinical management."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recommendation",
-            "description" : "Narrative description of the recommendation.",
-            "comment" : "May be coded, using a terminology, if required."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Rationale",
-            "description" : "Justifications for the recommendation."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extension",
-            "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
-            "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Topic",
-            "description" : "The topic or subject of the recommendation.",
-            "comment" : "Useful if multiple types of recommendations are made at the same time, and within the same data set."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Last updated",
-            "description" : "The date this recommendation was last updated."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "Evidence",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recommendation",
-            "description" : "Narrative description of the recommendation.",
-            "comment" : "May be coded, using a terminology, if required."
           }
         },
         "es-ar" : {
@@ -2134,70 +1161,6 @@
             "code" : "at0000.1",
             "text" : "Recomendación (2)",
             "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendación",
-            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendación",
-            "description" : "Descripción narrativa de la recomendación",
-            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Rationale(en)",
-            "description" : "*Justifications for the recommendation.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extensión",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendación",
-            "description" : "Descripción narrativa de la recomendación",
-            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
           }
         },
         "pt-br" : {
@@ -2206,70 +1169,6 @@
             "code" : "at0000.1",
             "text" : "Recomendação (2)",
             "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendação",
-            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendação",
-            "description" : "Descrição narrativa da recomendação.",
-            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Justificativa",
-            "description" : "Justificativa para a recomendação."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extensão",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendação",
-            "description" : "Descrição narrativa da recomendação.",
-            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
           }
         },
         "nb" : {
@@ -2278,70 +1177,6 @@
             "code" : "at0000.1",
             "text" : "Anbefaling (2)",
             "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Anbefaling",
-            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling",
-            "description" : "Fritekstbeskrivelse av anbefalingen.",
-            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Begrunnelse",
-            "description" : "Begrunnelse for anbefalingen."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Tema",
-            "description" : "Tema eller emne anbefalingen omhandler.",
-            "comment" : "Dataelementet er hensiktsmessig om man skal registrere flere anbefalinger til samme tema."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Sist oppdatert",
-            "description" : "Datoen denne anbefalingen sist ble oppdatert."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling",
-            "description" : "Fritekstbeskrivelse av anbefalingen.",
-            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           }
         },
         "sv" : {
@@ -2350,70 +1185,6 @@
             "code" : "at0000.1",
             "text" : "Rekommendation (2)",
             "description" : "Ett förslag eller råd om behandling."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Rekommendation",
-            "description" : "Ett förslag eller råd om behandling."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Rekommendation",
-            "description" : "Beskrivning av rekommendationen.",
-            "comment" : "Kan kodas i en terminologi vid behov."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Rationale(en)",
-            "description" : "*Justifications for the recommendation.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilläggsinformation",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Rekommendation",
-            "description" : "Beskrivning av rekommendationen.",
-            "comment" : "Kan kodas i en terminologi vid behov."
           }
         },
         "de" : {
@@ -2422,70 +1193,6 @@
             "code" : "at0000.1",
             "text" : "Empfehlung (2)",
             "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Empfehlung",
-            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Empfehlung",
-            "description" : "Beschreibung der Empfehlung.",
-            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Begründung",
-            "description" : "Begründung für die Empfehlung."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Modelle."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Gegenstand",
-            "description" : "Das Thema oder der Gegenstand der Empfehlung.",
-            "comment" : "Hilfreich, wenn mehrere Arten von Empfehlungen gleichzeitig und innerhalb desselben Datensatzes abgegeben werden."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Zuletzt aktualisiert",
-            "description" : "Das Datum, an dem diese Empfehlung zuletzt aktualisiert wurde."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Empfehlung",
-            "description" : "Beschreibung der Empfehlung.",
-            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
           }
         },
         "nl" : {
@@ -2494,70 +1201,6 @@
             "code" : "at0000.1",
             "text" : "Advies (2)",
             "description" : "Een suggestie, advies of voorstel voor behandeling."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Advies",
-            "description" : "Een suggestie, advies of voorstel voor behandeling."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Advies",
-            "description" : "Verhalende beschrijving van het advies.",
-            "comment" : "Mag gecodeerd worden middels terminologie, indien vereist."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Onderbouwing",
-            "description" : "De onderbouwing voor het advies."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Uitbreiding",
-            "description" : "Additionele informatie benodigd voor het uitbreiden van het model met lokale content of het allignen met andere referentie modellen of formalismen.",
-            "comment" : "Bijvoorbeeld: lokale informatie eisen of metadata om te alignen met FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Onderwerp",
-            "description" : "Het onderwerp waar het advies over gaat.",
-            "comment" : "Bruikbaar als verschillende type adviezen op het zelfde moment gemaakt worden binnen dezelfde dataset."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Laatst geüpdate",
-            "description" : "De datum waarop het advies voor het laatst is geüpdate."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "*Evidence (en)",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Advies",
-            "description" : "Verhalende beschrijving van het advies.",
-            "comment" : "Mag gecodeerd worden middels terminologie, indien vereist."
           }
         }
       },
@@ -2787,7 +1430,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-003.v2"
@@ -2795,58 +1438,27 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "EVALUATION",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "data",
-        "existence" : "1..1",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
           "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0006",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "1..*",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -2860,135 +1472,6 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..*",
-              "nodeId" : "at0003",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0008",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "existence" : "0..1",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
-          "nodeId" : "at0004",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0007",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0005",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -3006,70 +1489,6 @@
             "code" : "at0000.1",
             "text" : "If Rehab is NOT recommended",
             "description" : "A suggestion, advice or proposal for clinical management."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recommendation",
-            "description" : "A suggestion, advice or proposal for clinical management."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recommendation",
-            "description" : "Narrative description of the recommendation.",
-            "comment" : "May be coded, using a terminology, if required."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Rationale",
-            "description" : "Justifications for the recommendation."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extension",
-            "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
-            "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Topic",
-            "description" : "The topic or subject of the recommendation.",
-            "comment" : "Useful if multiple types of recommendations are made at the same time, and within the same data set."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Last updated",
-            "description" : "The date this recommendation was last updated."
-          },
-          "at0008" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008",
-            "text" : "Evidence",
-            "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recommendation",
-            "description" : "Narrative description of the recommendation.",
-            "comment" : "May be coded, using a terminology, if required."
           }
         },
         "es-ar" : {
@@ -3079,69 +1498,11 @@
             "text" : "Recomendación (3)",
             "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendación",
-            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendación",
-            "description" : "Descripción narrativa de la recomendación",
-            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Rationale(en)",
-            "description" : "*Justifications for the recommendation.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extensión",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008",
             "text" : "*Evidence (en)",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendación",
-            "description" : "Descripción narrativa de la recomendación",
-            "comment" : "Puede ser codificada mediante una terminología si así se lo requiere."
           }
         },
         "pt-br" : {
@@ -3151,69 +1512,11 @@
             "text" : "Recomendação (3)",
             "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Recomendação",
-            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendação",
-            "description" : "Descrição narrativa da recomendação.",
-            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Justificativa",
-            "description" : "Justificativa para a recomendação."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Extensão",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008",
             "text" : "*Evidence (en)",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Recomendação",
-            "description" : "Descrição narrativa da recomendação.",
-            "comment" : "Pode ser codificada, utilizando terminologia, se necessário."
           }
         },
         "nb" : {
@@ -3223,69 +1526,11 @@
             "text" : "Anbefaling (3)",
             "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Anbefaling",
-            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling",
-            "description" : "Fritekstbeskrivelse av anbefalingen.",
-            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Begrunnelse",
-            "description" : "Begrunnelse for anbefalingen."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Tema",
-            "description" : "Tema eller emne anbefalingen omhandler.",
-            "comment" : "Dataelementet er hensiktsmessig om man skal registrere flere anbefalinger til samme tema."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Sist oppdatert",
-            "description" : "Datoen denne anbefalingen sist ble oppdatert."
-          },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008",
             "text" : "*Evidence (en)",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling",
-            "description" : "Fritekstbeskrivelse av anbefalingen.",
-            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           }
         },
         "sv" : {
@@ -3295,69 +1540,11 @@
             "text" : "Rekommendation (3)",
             "description" : "Ett förslag eller råd om behandling."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Rekommendation",
-            "description" : "Ett förslag eller råd om behandling."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Rekommendation",
-            "description" : "Beskrivning av rekommendationen.",
-            "comment" : "Kan kodas i en terminologi vid behov."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Rationale(en)",
-            "description" : "*Justifications for the recommendation.(en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tilläggsinformation",
-            "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
-            "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Topic (en)",
-            "description" : "*The topic or subject of the recommendation. (en)",
-            "comment" : "*Useful if multiple types of recommendations are made at the same time, and within the same data set. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Last updated (en)",
-            "description" : "*The date this recommendation was last updated. (en)"
-          },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008",
             "text" : "*Evidence (en)",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Rekommendation",
-            "description" : "Beskrivning av rekommendationen.",
-            "comment" : "Kan kodas i en terminologi vid behov."
           }
         },
         "de" : {
@@ -3367,69 +1554,11 @@
             "text" : "Empfehlung (3)",
             "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Empfehlung",
-            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Empfehlung",
-            "description" : "Beschreibung der Empfehlung.",
-            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Begründung",
-            "description" : "Begründung für die Empfehlung."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Modelle."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Gegenstand",
-            "description" : "Das Thema oder der Gegenstand der Empfehlung.",
-            "comment" : "Hilfreich, wenn mehrere Arten von Empfehlungen gleichzeitig und innerhalb desselben Datensatzes abgegeben werden."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Zuletzt aktualisiert",
-            "description" : "Das Datum, an dem diese Empfehlung zuletzt aktualisiert wurde."
-          },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008",
             "text" : "*Evidence (en)",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Empfehlung",
-            "description" : "Beschreibung der Empfehlung.",
-            "comment" : "Kann bei Bedarf mit einer Terminologie kodiert werden."
           }
         },
         "nl" : {
@@ -3439,69 +1568,11 @@
             "text" : "Advies (3)",
             "description" : "Een suggestie, advies of voorstel voor behandeling."
           },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Advies",
-            "description" : "Een suggestie, advies of voorstel voor behandeling."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Advies",
-            "description" : "Verhalende beschrijving van het advies.",
-            "comment" : "Mag gecodeerd worden middels terminologie, indien vereist."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Onderbouwing",
-            "description" : "De onderbouwing voor het advies."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Uitbreiding",
-            "description" : "Additionele informatie benodigd voor het uitbreiden van het model met lokale content of het allignen met andere referentie modellen of formalismen.",
-            "comment" : "Bijvoorbeeld: lokale informatie eisen of metadata om te alignen met FHIR."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Onderwerp",
-            "description" : "Het onderwerp waar het advies over gaat.",
-            "comment" : "Bruikbaar als verschillende type adviezen op het zelfde moment gemaakt worden binnen dezelfde dataset."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Laatst geüpdate",
-            "description" : "De datum waarop het advies voor het laatst is geüpdate."
-          },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008",
             "text" : "*Evidence (en)",
             "description" : ""
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Advies",
-            "description" : "Verhalende beschrijving van het advies.",
-            "comment" : "Mag gecodeerd worden middels terminologie, indien vereist."
           }
         }
       },
@@ -3606,6 +1677,835 @@
         "email" : "joost.holslag@nedap.com"
       },
       "accreditation" : "MD",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c0c2fd35-38bc-4a9c-b791-78e6b69d66f6",
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "273302005",
+                    "value" : "Barthel index (assessment scale)",
+                    "translations" : {
+                      "en" : "Barthel index (assessment scale)"
+                    }
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Barthel score",
+            "description" : "The result or finding that supports the assertion.",
+            "comment" : "For example: '11 mm', '13 µg/L', '2.5 ml' or 'BRCA1 positive'. 'Result' can be coded with a terminology, where appropriate."
+          }
+        },
+        "nb" : { },
+        "de" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "25f3f07e-1c99-47c3-99a2-56967b763817",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Darin Leonhardt",
+        "organisation" : "Medizinische Hochschule Hannover, PLRI, PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "rehberg.alina@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg",
+        "organisation" : "Cambio CDS",
+        "email" : "therese.lindberg@cambio.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen, Vebjørn Arntzen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "silje.ljosland.bakke@nasjonalikt.no, liv.laugen@ous-hf.no, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c0c2fd35-38bc-4a9c-b791-78e6b69d66f6",
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "450742003",
+                    "value" : "NIHSS-vurdering",
+                    "translations" : {
+                      "en" : "NIHSS-vurdering"
+                    }
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Clinical evidence (2)",
+            "description" : "Details about findings that support a clinical assertion."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "NIHSS score day 1",
+            "description" : "The result or finding that supports the assertion.",
+            "comment" : "For example: '11 mm', '13 µg/L', '2.5 ml' or 'BRCA1 positive'. 'Result' can be coded with a terminology, where appropriate."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinisk grunnlag (2)",
+            "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinische Evidenz (2)",
+            "description" : "Details über Befunde, die eine klinische Feststellung stützen."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Kliniska bevis (2)",
+            "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "25f3f07e-1c99-47c3-99a2-56967b763817",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Darin Leonhardt",
+        "organisation" : "Medizinische Hochschule Hannover, PLRI, PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "rehberg.alina@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg",
+        "organisation" : "Cambio CDS",
+        "email" : "therese.lindberg@cambio.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen, Vebjørn Arntzen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "silje.ljosland.bakke@nasjonalikt.no, liv.laugen@ous-hf.no, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c0c2fd35-38bc-4a9c-b791-78e6b69d66f6",
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-003.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "450742003",
+                    "value" : "NIHSS-vurdering",
+                    "translations" : {
+                      "en" : "NIHSS-vurdering"
+                    }
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Clinical evidence (3)",
+            "description" : "Details about findings that support a clinical assertion."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "NIHSS score",
+            "description" : "The result or finding that supports the assertion.",
+            "comment" : "For example: '11 mm', '13 µg/L', '2.5 ml' or 'BRCA1 positive'. 'Result' can be coded with a terminology, where appropriate."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinisk grunnlag (3)",
+            "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinische Evidenz (3)",
+            "description" : "Details über Befunde, die eine klinische Feststellung stützen."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Kliniska bevis (3)",
+            "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "25f3f07e-1c99-47c3-99a2-56967b763817",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Darin Leonhardt",
+        "organisation" : "Medizinische Hochschule Hannover, PLRI, PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "rehberg.alina@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg",
+        "organisation" : "Cambio CDS",
+        "email" : "therese.lindberg@cambio.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen, Vebjørn Arntzen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "silje.ljosland.bakke@nasjonalikt.no, liv.laugen@ous-hf.no, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "c0c2fd35-38bc-4a9c-b791-78e6b69d66f6",
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinical_evidence.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-004.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "1255866005",
+                    "value" : "Modified Rankin Scale score",
+                    "translations" : {
+                      "en" : "Modified Rankin Scale score"
+                    }
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Clinical evidence (4)",
+            "description" : "Details about findings that support a clinical assertion."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "mRS",
+            "description" : "The result or finding that supports the assertion.",
+            "comment" : "For example: '11 mm', '13 µg/L', '2.5 ml' or 'BRCA1 positive'. 'Result' can be coded with a terminology, where appropriate."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinisk grunnlag (4)",
+            "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Klinische Evidenz (4)",
+            "description" : "Details über Befunde, die eine klinische Feststellung stützen."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Kliniska bevis (4)",
+            "description" : "Detaljer om resultat som stöder ett kliniskt påstående."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "25f3f07e-1c99-47c3-99a2-56967b763817",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Darin Leonhardt",
+        "organisation" : "Medizinische Hochschule Hannover, PLRI, PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "rehberg.alina@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg",
+        "organisation" : "Cambio CDS",
+        "email" : "therese.lindberg@cambio.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen, Vebjørn Arntzen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "silje.ljosland.bakke@nasjonalikt.no, liv.laugen@ous-hf.no, varntzen@ous-hf.no"
+      },
       "otherDetails" : { }
     } ]
   } ],
