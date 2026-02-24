@@ -1,12 +1,18 @@
-archetype (adl_version=1.4; uid=0a73ee5f-ae63-477b-8d9b-c6a5b40bb34d)
+﻿archetype (adl_version=1.4; uid=141386aa-c170-4c14-a9d8-aa5cc9fe8618)
 	openEHR-EHR-OBSERVATION.modified_rankin_scale.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Modified Rankin Scale (mRS)
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Kim Werle">
+				["organisation"] = <"Medizinische Hochschule Hannover">
+			>
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
@@ -17,32 +23,40 @@ language
 			accreditation = <"Nasjonal IKT HF">
 		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2020-03-09">
 		["name"] = <"Mikkel Johan Gaup Grønmo">
 		["organisation"] = <"Helse Nord RHF">
 		["email"] = <"mikkel.johan.gaup.gronmo@helse-nord.no">
+		["date"] = <"2020-03-09">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Erling Are Hole, Helse Bergen, Norway","Stein Arne Rimehaug, Sunnaas sykehus, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Astrid Askeland, Dips ASA, Norway","Heidi Aursand, Oslo universitetssykehus, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","Rui Coutinho, University Hospital Southampton, United Kingdom","Veronica Dahl Hvitstein, Finnmarkssykehuset HF, Norway","Tom Dahlberg, Helgelandssykehuset HF, Fag, forskning og utdanning, Norway","Celeste Dias, Faculty of Medicine, Portugal","Stig Erik Hegrestad, Helse Førde, Norway","Kåre Flø, DIPS ASA, Norway","Mikkel Gaup Grønmo, Helse-Nord, FSE, Norway (openEHR Editor)","Roar Holm, Helse Vest IKT A/S, Norway","Morten Hørthe, DIPS, Norway","Hanne Joensen, Helse Bergen HUS, Norway","Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Tone Løkse, UNN, Norway","Anne M Gromsrud, DIPS AS, Norway","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Bjørn Næss, DIPS ASA, Norway","Nils Ottar Henryson Talle, Seksjon for Ergoterapi og Velferdsteknologi, Helse Førde, Norway","Norwegian Review Summary, Nasjonal IKT HF, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Erfassung des Grads der Behinderung und des Umfangs der erforderlichen Unterstützung nach einem Schlaganfall oder einem anderen neurologischen Ereignis.">
+			use = <"Wird verwendet, um den Grad der Behinderung und den Umfang der erforderlichen Unterstützung nach einem Schlaganfall oder einem anderen neurologischen Ereignis zu erfassen.">
+			keywords = <"Schlaganfall, Funktion, neurologisch, Behinderung, Pflege, Aktivitäten des täglichen Lebens, mRS", ...>
+			misuse = <"">
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"Brukes for å registrere graden av funksjonsnedsettelse eller behov for bistand i aktiviteter i dagliglivet hos et individ som har hatt hjerneslag eller en annen form for nevrologisk hendelse.">
-			keywords = <"mrs, funksjonssvikt, funksjonsnedsettelse, hjelpebehov, hjerneblødning, ADL, kroppsfunksjon, nevrologisk skade, nevrologisk uførhet", ...>
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 			use = <"For å registrere graden av funksjonsnedsettelse eller behov for bistand i aktiviteter i dagliglivet hos et individ som har hatt hjerneslag eller en annen form for nevrologisk hendelse.">
+			keywords = <"mrs, funksjonssvikt, funksjonsnedsettelse, hjelpebehov, hjerneblødning, ADL, kroppsfunksjon, nevrologisk skade, nevrologisk uførhet", ...>
+			misuse = <"">
+			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the degree of disability and level of assistance required after a stroke or another neurological event.">
-			keywords = <"Stroke, function, neurological, disability, nursing, ADL, mrs", ...>
-			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 			use = <"Use to record the degree of disability and level of assistance required after a stroke or another neurological event.">
+			keywords = <"Stroke, function, neurological, disability, nursing, ADL, mrs", ...>
+			misuse = <"">
+			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Erling Are Hole, Helse Bergen, Norway", "Stein Arne Rimehaug, Sunnaas sykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Astrid Askeland, Dips ASA, Norway", "Heidi Aursand, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Rui Coutinho, University Hospital Southampton, United Kingdom", "Veronica Dahl Hvitstein, Finnmarkssykehuset HF, Norway", "Tom Dahlberg, Helgelandssykehuset HF, Fag, forskning og utdanning, Norway", "Celeste Dias, Faculty of Medicine, Portugal", "Stig Erik Hegrestad, Helse Førde, Norway", "Kåre Flø, DIPS ASA, Norway", "Mikkel Gaup Grønmo, Helse-Nord, FSE, Norway (openEHR Editor)", "Roar Holm, Helse Vest IKT A/S, Norway", "Morten Hørthe, DIPS, Norway", "Hanne Joensen, Helse Bergen HUS, Norway", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Tone Løkse, UNN, Norway", "Anne M Gromsrud, DIPS AS, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Bjørn Næss, DIPS ASA, Norway", "Nils Ottar Henryson Talle, Seksjon for Ergoterapi og Velferdsteknologi, Helse Førde, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -56,9 +70,9 @@ H.. Pakkeforløp hjerneslag, modified rankin scale. [Internet]. Helsedirektorate
 		["original_namespace"] = <"no.nasjonalikt">
 		["original_publisher"] = <"Nasjonal IKT">
 		["custodian_namespace"] = <"org.openEHR Foundation">
-		["MD5-CAM-1.0.1"] = <"61DC75068DD9104070A4F227730B498F">
-		["build_uid"] = <"b5b51a16-e954-4908-b7cb-898b2a19908e">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"B89C90091DD22EDA44C2C915FA83CC72">
+		["build_uid"] = <"26350b67-cfca-4119-96e6-5cd52876cee7">
+		["revision"] = <"1.0.1">
 	>
 
 definition
@@ -70,7 +84,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0007] matches {    -- Modified Rankin Scale
+									ELEMENT[at0007] matches {    -- Modified Rankin scale
 										value matches {
 											0|[local::at0008],
 											1|[local::at0009],
@@ -99,6 +113,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -221,6 +236,67 @@ ontology
 				["at0014"] = <
 					text = <"Død">
 					description = <"Død.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Modifizierte Rankin-Skala (mRS)">
+					description = <"Ein Beurteilungsinstrument zur Messung des Grads der Behinderung und des Umfangs der erforderlichen Unterstützung nach einem Schlaganfall oder einem anderen neurologischen Ereignis.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Ereignis zu einem beliebigen Zeitpunkt">
+					description = <"Standardmäßiges, nicht spezifiziertes Ereignis zu einem bestimmten Zeitpunkt, das explizit in einem Template oder zur Laufzeit definiert werden kann.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen, die erforderlich sind, um das Modell um lokale Inhalte zu erweitern oder es an andere Referenzmodelle oder Formalismen anzupassen.">
+					comment = <"Zum Beispiel: lokale Informationsanforderungen; oder zusätzliche Metadaten zur Angleichung an FHIR.">
+				>
+				["at0007"] = <
+					text = <"Modifizierte Rankin-Skala">
+					description = <"Grad der Behinderung und Umfang der erforderlichen Hilfe nach einem Schlaganfall oder einem anderen neurologischen Ereignis.">
+				>
+				["at0008"] = <
+					text = <"Keine Symptome">
+					description = <"Überhaupt keine Symptome.">
+				>
+				["at0009"] = <
+					text = <"Keine nennenswerte Behinderung">
+					description = <"Trotz Symptomen in der Lage, alle üblichen Aufgaben und Tätigkeiten auszuführen.">
+				>
+				["at0010"] = <
+					text = <"Leichte Behinderung">
+					description = <"Unfähig, alle bisherigen Tätigkeiten auszuführen, aber in der Lage, sich ohne Hilfe um die eigenen Angelegenheiten zu kümmern.">
+				>
+				["at0011"] = <
+					text = <"Mäßige Behinderung">
+					description = <"Benötigt etwas Hilfe, kann aber ohne Hilfe gehen.">
+				>
+				["at0012"] = <
+					text = <"Mittelschwere Behinderung">
+					description = <"Unfähig, ohne Hilfe zu gehen und nicht in der Lage, sich ohne Hilfe um die eigenen körperlichen Bedürfnisse zu kümmern.">
+				>
+				["at0013"] = <
+					text = <"Schwere Behinderung">
+					description = <"Bettlägerig, inkontinent und ständige Pflege und Aufmerksamkeit erfordernd.">
+				>
+				["at0014"] = <
+					text = <"Tod">
+					description = <"Tod.">
 				>
 			>
 		>
