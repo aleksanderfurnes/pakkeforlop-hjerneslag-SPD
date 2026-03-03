@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "2.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "2e04bdbdd2b17a0cda72fbe12cba9044",
+      "MD5-CAM-1.0.1" : "207a54148a6a51cc96a223f04e26090a",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB"
     },
     "details" : {
@@ -374,7 +374,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "skdjfslkjfls",
+          "text" : "Tverrfaglig vurderingsskjema slagenhet",
           "description" : "Interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell."
         }
       },
@@ -594,7 +594,7 @@
                     "children" : [ {
                       "@type" : "C_STRING",
                       "rmTypeName" : "STRING",
-                      "constraint" : [ "Rehab is recommended", "Rehab is not recommended" ]
+                      "constraint" : [ "Initial rehabilitering anbefales", "Initial rehabilitering anbefales ikke" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -617,7 +617,7 @@
                     "children" : [ {
                       "@type" : "C_STRING",
                       "rmTypeName" : "STRING",
-                      "constraint" : [ "Expected benefit from rehab because the must-criteria are met", "No expected benefit from rehab because the must-criteria are not met", "No expected benefit from rehab because other conditions are emphasized even if the must-criteria are met" ]
+                      "constraint" : [ "Forventet nytte av rehabilitering fordi må-kriteriene er oppfylt", "Ingen forventet nytte av rehabilitering fordi må-kriteriene ikke er oppfylt", "Ingen forventet nytte av rehabilitering fordi andre forhold vektlegges selv om må-kriteriene er oppfylt" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -628,19 +628,19 @@
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0008.1",
+              "nodeId" : "at0008.2",
               "attributes" : [ ],
               "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-001.v1",
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-002.v1",
               "referenceType" : "archetypeOverlay"
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0008.2",
+              "nodeId" : "at0008.1",
               "attributes" : [ ],
               "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-002.v1",
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-001.v1",
               "referenceType" : "archetypeOverlay"
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
@@ -708,7 +708,14 @@
         },
         "es-ar" : { },
         "pt-br" : { },
-        "nb" : { },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Slagenhetens vurdering",
+            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
+          }
+        },
         "sv" : { },
         "de" : { },
         "nl" : { },
@@ -1034,7 +1041,7 @@
                     "children" : [ {
                       "@type" : "C_STRING",
                       "rmTypeName" : "STRING",
-                      "constraint" : [ "Specialized rehabilitation Level 1", "Specialized rehabilitation Level 2", "Specialized rehabilitation Level 3" ]
+                      "constraint" : [ "Spesialisert rehabilitering nivå 1", "Spesialisert rehabilitering nivå 2", "Spesialisert rehabilitering ukjent nivå" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1080,7 +1087,7 @@
                     "children" : [ {
                       "@type" : "C_STRING",
                       "rmTypeName" : "STRING",
-                      "constraint" : [ "Municipal rehabilitation - day", "Municipal rehabilitation - At home", "Municipal rehabilitation - 24 hours" ]
+                      "constraint" : [ "Kommunal rehabilitering dag", "Kommunal rehabilitering hjemme", "Kommunal rehabilitering døgn" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1175,20 +1182,27 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Anbefaling (2)",
+            "text" : "Anbefalt videre forløp når initial rehabilitering er anbefalt",
             "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
           },
           "at0002.2" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling (2)",
+            "code" : "at0002.2",
+            "text" : "Tidlig støttet utskriving (TSU)",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           },
           "at0002.3" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anbefaling (3)",
+            "code" : "at0002.3",
+            "text" : "Kommunal rehabilitering (flere kryss mulig)",
+            "description" : "Fritekstbeskrivelse av anbefalingen.",
+            "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Spesialisert rehabilitering (se hjelpeskjema)",
             "description" : "Fritekstbeskrivelse av anbefalingen.",
             "comment" : "Det bør om mulig benyttes terminologi for å angi anbefaling."
           }
@@ -1611,7 +1625,7 @@
                     "children" : [ {
                       "@type" : "C_STRING",
                       "rmTypeName" : "STRING",
-                      "constraint" : [ "Discharge directly home", "Discharge to 24-hour municipal care facility", "Transferred to another department for assessment/treatment" ]
+                      "constraint" : [ "Utskrivning direkte hjem", "Utskrivning til heldøgns kommunalt omsorgstilbud", "Overføres annen avdeling for utredning/behandling" ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1657,7 +1671,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Anbefaling (3)",
+            "text" : "Anbefalt videre forløp når initial rehabilitering ikke er anbefalt",
             "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
           }
         },
@@ -1940,7 +1954,8 @@
                     "code" : "273302005",
                     "value" : "Barthel index (assessment scale)",
                     "translations" : {
-                      "en" : "Barthel index (assessment scale)"
+                      "en" : "Barthel index (assessment scale)",
+                      "nb" : "Barthel index (assessment scale)"
                     }
                   } ]
                 } ]
@@ -2021,8 +2036,15 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Barthel Index",
+            "text" : "Barthel ADL Indeks skår",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Barthel ADL Indeks skår",
+            "description" : "Resultatet eller funnet som støtter utsagnet.",
+            "comment" : "For eksempel \"11 mm\", \"13 µg/L\", \"2.5 ml\" or \"BRCA1 positiv\". \"Resultat\" kan bli kodet med en terminologi der det er passende."
           }
         },
         "de" : { },
@@ -2208,7 +2230,8 @@
                     "code" : "450742003",
                     "value" : "NIHSS-vurdering",
                     "translations" : {
-                      "en" : "NIHSS-vurdering"
+                      "en" : "NIHSS-vurdering",
+                      "nb" : "NIHSS-vurdering"
                     }
                   } ]
                 } ]
@@ -2289,8 +2312,15 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag (2)",
+            "text" : "NIHSS Skår dag 1",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "NIHSS skår dag 1",
+            "description" : "Resultatet eller funnet som støtter utsagnet.",
+            "comment" : "For eksempel \"11 mm\", \"13 µg/L\", \"2.5 ml\" or \"BRCA1 positiv\". \"Resultat\" kan bli kodet med en terminologi der det er passende."
           }
         },
         "de" : {
@@ -2490,7 +2520,8 @@
                     "code" : "450742003",
                     "value" : "NIHSS-vurdering",
                     "translations" : {
-                      "en" : "NIHSS-vurdering"
+                      "en" : "NIHSS-vurdering",
+                      "nb" : "NIHSS-vurdering"
                     }
                   } ]
                 } ]
@@ -2571,8 +2602,15 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag (3)",
+            "text" : "NIHSS skår",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "NIHSS skår",
+            "description" : "Resultatet eller funnet som støtter utsagnet.",
+            "comment" : "For eksempel \"11 mm\", \"13 µg/L\", \"2.5 ml\" or \"BRCA1 positiv\". \"Resultat\" kan bli kodet med en terminologi der det er passende."
           }
         },
         "de" : {
@@ -2772,7 +2810,8 @@
                     "code" : "1255866005",
                     "value" : "Modified Rankin Scale score",
                     "translations" : {
-                      "en" : "Modified Rankin Scale score"
+                      "en" : "Modified Rankin Scale score",
+                      "nb" : "Modified Rankin Scale score"
                     }
                   } ]
                 } ]
@@ -2853,8 +2892,15 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag (4)",
+            "text" : "mRS skår",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "mRS skår",
+            "description" : "Resultatet eller funnet som støtter utsagnet.",
+            "comment" : "For eksempel \"11 mm\", \"13 µg/L\", \"2.5 ml\" or \"BRCA1 positiv\". \"Resultat\" kan bli kodet med en terminologi der det er passende."
           }
         },
         "de" : {
@@ -3029,6 +3075,20 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "nodeId" : "at0005.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -3054,32 +3114,51 @@
                     "code" : "1",
                     "value" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1",
                     "translations" : {
-                      "en" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
+                      "en" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1",
+                      "nb" : "Funksjonssvikt etter hjerneslaget. Pasienten har mRS>1"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "2",
                     "value" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt",
                     "translations" : {
-                      "en" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
+                      "en" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt",
+                      "nb" : "Mulighet til å forstå instruksjoner verbalt eller nonverbalt"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "3",
                     "value" : "Kognitivt nivå som sikrer en viss innlæringsevne",
                     "translations" : {
-                      "en" : "Kognitivt nivå som sikrer en viss innlæringsevne"
+                      "en" : "Kognitivt nivå som sikrer en viss innlæringsevne",
+                      "nb" : "Kognitivt nivå som sikrer en viss innlæringsevne"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "4",
                     "value" : "Motivasjon for trening til stede eller kan bygges opp",
                     "translations" : {
-                      "en" : "Motivasjon for trening til stede eller kan bygges opp"
+                      "en" : "Motivasjon for trening til stede eller kan bygges opp",
+                      "nb" : "Motivasjon for trening til stede eller kan bygges opp"
                     }
                   } ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0006.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -3132,8 +3211,15 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag (5)",
+            "text" : "Må-kriterier",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Må-kriterier",
+            "description" : "Resultatet eller funnet som støtter utsagnet.",
+            "comment" : "For eksempel \"11 mm\", \"13 µg/L\", \"2.5 ml\" or \"BRCA1 positiv\". \"Resultat\" kan bli kodet med en terminologi der det er passende."
           }
         },
         "de" : {
@@ -3308,6 +3394,20 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "nodeId" : "at0005.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -3333,53 +3433,75 @@
                     "code" : "1",
                     "value" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering",
                     "translations" : {
-                      "en" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
+                      "en" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering",
+                      "nb" : "Utfall/funksjonssvikt med godt kunnskapsgrunnlag for effekt av rehabilitering"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "2",
                     "value" : "Tidligere funksjonsnivå tilsvarende mRS 0-2",
                     "translations" : {
-                      "en" : "Tidligere funksjonsnivå tilsvarende mRS 0-2"
+                      "en" : "Tidligere funksjonsnivå tilsvarende mRS 0-2",
+                      "nb" : "Tidligere funksjonsnivå tilsvarende mRS 0-2"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "3",
                     "value" : "Ingen uttalt komorbiditet som hindrer rehabilitering",
                     "translations" : {
-                      "en" : "Ingen uttalt komorbiditet som hindrer rehabilitering"
+                      "en" : "Ingen uttalt komorbiditet som hindrer rehabilitering",
+                      "nb" : "Ingen uttalt komorbiditet som hindrer rehabilitering"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "4",
                     "value" : "Tåler moderat intensitet/mengde av trening",
                     "translations" : {
-                      "en" : "Tåler moderat intensitet/mengde av trening"
+                      "en" : "Tåler moderat intensitet/mengde av trening",
+                      "nb" : "Tåler moderat intensitet/mengde av trening"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "5",
                     "value" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering",
                     "translations" : {
-                      "en" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
+                      "en" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering",
+                      "nb" : "Tydelig bedring av utfall/funksjon fra innleggelse til vurdering"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "6",
                     "value" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende",
                     "translations" : {
-                      "en" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
+                      "en" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende",
+                      "nb" : "Det foreligger konkrete og realistiske mål for rehabiliteringen utarbeidet i samarbeid med pasient og eventuelt pårørende"
                     }
                   }, {
                     "terminologyId" : "local_terms",
                     "code" : "7",
                     "value" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen",
                     "translations" : {
-                      "en" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
+                      "en" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen",
+                      "nb" : "Andre forhold som øker muligheten for å oppnå nytte av rehabiliteringen"
                     }
                   } ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0006.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -3432,8 +3554,15 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag (6)",
+            "text" : "Bør-kriterier",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Bør-kriterier",
+            "description" : "Resultatet eller funnet som støtter utsagnet.",
+            "comment" : "For eksempel \"11 mm\", \"13 µg/L\", \"2.5 ml\" or \"BRCA1 positiv\". \"Resultat\" kan bli kodet med en terminologi der det er passende."
           }
         },
         "de" : {
@@ -3609,6 +3738,20 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0005.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -3617,6 +3760,22 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -3670,7 +3829,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Klinisk grunnlag (7)",
+            "text" : "Andre forhold som bør vektlegges",
             "description" : "Detaljer om funn som underbygger et klinisk utsagn."
           }
         },
