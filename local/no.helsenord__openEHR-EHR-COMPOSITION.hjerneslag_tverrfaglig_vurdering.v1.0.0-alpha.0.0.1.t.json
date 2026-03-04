@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "2.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "dd652b76933f1fc6c30905b906b4e75d",
+      "MD5-CAM-1.0.1" : "49425410a9830f17f43dd6e5b3e34bd7",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB"
     },
     "details" : {
@@ -627,20 +627,42 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
+                    "rmAttributeName" : "defining_code",
                     "children" : [ {
-                      "@type" : "C_STRING",
-                      "rmTypeName" : "STRING",
-                      "constraint" : [ "Initial rehabilitering anbefales", "Initial rehabilitering anbefales ikke" ]
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "Anbefaling_Rehabilitering"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "Anbefaling_Rehabilitering" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "Anbefaling_Rehabilitering",
+                        "code" : "1",
+                        "value" : "Initial rehabilitering anbefales",
+                        "translations" : {
+                          "nb" : "Initial rehabilitering anbefales"
+                        }
+                      }, {
+                        "terminologyId" : "Anbefaling_Rehabilitering",
+                        "code" : "2",
+                        "value" : "Initial rehabilitering anbefales ikke",
+                        "translations" : {
+                          "nb" : "Initial rehabilitering anbefales ikke"
+                        }
+                      } ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1111,6 +1133,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1127,26 +1150,26 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "local_terms"
+                        "value" : "Spesialisert_Rehabilitering"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
+                      "selectedTerminologies" : [ "Spesialisert_Rehabilitering" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "Spesialisert_Rehabilitering",
                         "code" : "1",
                         "value" : "Spesialisert rehabilitering nivå 1",
                         "translations" : {
                           "nb" : "Spesialisert rehabilitering nivå 1"
                         }
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "Spesialisert_Rehabilitering",
                         "code" : "2",
                         "value" : "Spesialisert rehabilitering nivå 2",
                         "translations" : {
                           "nb" : "Spesialisert rehabilitering nivå 2"
                         }
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "Spesialisert_Rehabilitering",
                         "code" : "3",
                         "value" : "Spesialisert rehabilitering ukjent nivå",
                         "translations" : {
@@ -1162,6 +1185,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
               "nodeId" : "at0002.2",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1178,12 +1202,12 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "local_terms_2"
+                        "value" : "TSU"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms_2" ],
+                      "selectedTerminologies" : [ "TSU" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms_2",
+                        "terminologyId" : "TSU",
                         "code" : "1",
                         "value" : "Tidlig støttet utskriving (TSU)",
                         "translations" : {
@@ -1199,6 +1223,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..3",
               "nodeId" : "at0002.3",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1215,26 +1240,26 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "local_terms_3"
+                        "value" : "Kommunal_Rehabilitering"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms_3" ],
+                      "selectedTerminologies" : [ "Kommunal_Rehabilitering" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms_3",
+                        "terminologyId" : "Kommunal_Rehabilitering",
                         "code" : "1",
                         "value" : "Kommunal rehabilitering dag",
                         "translations" : {
                           "nb" : "Kommunal rehabilitering dag"
                         }
                       }, {
-                        "terminologyId" : "local_terms_3",
+                        "terminologyId" : "Kommunal_Rehabilitering",
                         "code" : "2",
                         "value" : "Kommunal rehabilitering hjemme",
                         "translations" : {
                           "nb" : "Kommunal rehabilitering hjemme"
                         }
                       }, {
-                        "terminologyId" : "local_terms_3",
+                        "terminologyId" : "Kommunal_Rehabilitering",
                         "code" : "3",
                         "value" : "Kommunal rehabilitering døgn",
                         "translations" : {
@@ -1814,6 +1839,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1830,26 +1856,26 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "local_terms"
+                        "value" : "Utskriving_uten_rehab"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
+                      "selectedTerminologies" : [ "Utskriving_uten_rehab" ],
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "Utskriving_uten_rehab",
                         "code" : "1",
                         "value" : "Utskrivning direkte hjem",
                         "translations" : {
                           "nb" : "Utskrivning direkte hjem"
                         }
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "Utskriving_uten_rehab",
                         "code" : "2",
                         "value" : "Utskrivning til heldøgns kommunalt omsorgstilbud",
                         "translations" : {
                           "nb" : "Utskrivning til heldøgns kommunalt omsorgstilbud"
                         }
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "Utskriving_uten_rehab",
                         "code" : "3",
                         "value" : "Overføres annen avdeling for utredning/behandling",
                         "translations" : {
@@ -4232,6 +4258,13 @@
                   "attributeTuples" : [ ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
